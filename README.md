@@ -1,0 +1,2 @@
+# HDT-Battlegrounds helper
+ 
