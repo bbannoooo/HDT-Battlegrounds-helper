@@ -30,6 +30,7 @@ namespace BattlegroundsHelper.view
         internal void SetProbability()
         {
             //calculate probability
+            //percentage.Content = Tostring(calculatedPercentage) + "%";
         }
         public void GameStart()
         {

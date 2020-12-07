@@ -5,14 +5,35 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:local="clr-namespace:BattlegroundsHelper.view"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-    d:DesignHeight="50"
-    d:DesignWidth="150"
+    d:DesignHeight="60"
+    d:DesignWidth="109"
     mc:Ignorable="d">
-    <StackPanel x:Name="ProbabiltyBox" HorizontalAlignment="Center">
-        <Label
-            x:Name="print"
-            Content="100%"
-            FontSize="18"
-            Foreground="White" />
+    <StackPanel
+        x:Name="ProbabiltyBox"
+        HorizontalAlignment="Center"
+        VerticalAlignment="Center">
+        <StackPanel Background="DeepSkyBlue">
+            <Label
+                x:Name="Probabiltity"
+                HorizontalAlignment="Center"
+                Content="Probability"
+                FontFamily="Source Sans Pro"
+                FontSize="18"
+                FontWeight="Black"
+                Foreground="White" />
+        </StackPanel>
+
+        <StackPanel Background="White">
+            <Label
+                x:Name="percentage"
+                HorizontalAlignment="Center"
+                Content="100%"
+                FontFamily="Source Sans Pro"
+                FontSize="18"
+                FontWeight="Black"
+                Foreground="Black" />
+        </StackPanel>
+
+
     </StackPanel>
 </UserControl>
