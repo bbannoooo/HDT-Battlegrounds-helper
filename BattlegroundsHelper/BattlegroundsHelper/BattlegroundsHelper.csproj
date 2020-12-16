@@ -39,6 +39,7 @@
     <Reference Include="PresentationFramework" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
     <Reference Include="System.Xaml" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -52,15 +53,21 @@
     <Compile Include="RerollProbability.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RerollProbabilityData.cs" />
+    <Compile Include="utils\Calculate.cs" />
     <Compile Include="view\ProbabilityBox.xaml.cs">
       <DependentUpon>ProbabilityBox.xaml</DependentUpon>
     </Compile>
+    <Compile Include="view\ProbabilityControl.xaml.cs">
+      <DependentUpon>ProbabilityControl.xaml</DependentUpon>
+    </Compile>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="utils\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <Page Include="view\ProbabilityBox.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="view\ProbabilityControl.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

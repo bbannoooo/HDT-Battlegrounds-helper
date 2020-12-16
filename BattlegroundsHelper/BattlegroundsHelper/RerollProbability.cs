@@ -21,7 +21,7 @@ namespace HDT.Plugins.RerollProbability
 {
     public class RerollProbability : IPlugin
     {
-        private probabilityBox _probabilityBox;
+        private ProbabilityBox _probabilityBox;
         #region Manifest
         public string Author
         {
@@ -60,21 +60,22 @@ namespace HDT.Plugins.RerollProbability
 
         public void OnLoad()
         {
-            _probabilityBox = new probabilityBox();
-            RerollProbabilityData._overlay = _probabilityBox;
+            _probabilityBox = new ProbabilityBox();
+            RerollProbabilityData.overlay = _probabilityBox;
 
             GameEvents.OnGameStart.Add(RerollProbabilityData.GameStart);
-            GameEvents.OnGameEnd.Add(RerollProbabilityData.GameEnd);        
+            GameEvents.OnTurnStart.Add(RerollProbabilityData.UpdatePercentage);
+            GameEvents.OnInMenu.Add(RerollProbabilityData.InMenu);
+            GameEvents.OnGameEnd.Add(RerollProbabilityData.GameEnd);
         }
 
         public void OnUnload()
         {
             Core.OverlayCanvas.Children.Remove(_probabilityBox);
         }
-
+        
         public void OnUpdate()
         {
-            RerollProbabilityData.Update();
         }
     }
 }
